@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevPhone</title>
+    <!-- css -->
+    <link rel="stylesheet" href="css/produtos.css" />
+    <link rel="icon" type="image/png" href="./assets/images/apple.png">
+</head>
+<body>
+    <!-- Aqui vai o conteúdo de cabeçalho do site -->
+    <header>
+
+        <div class="logo">
+            <a href="index.html" aria-label="Página inicial">
+            <!-- Aqui pode ser um texto ou imagem SVG/PNG da logo -->
+            <img src="./assets/images/logo.svg" viewBox="0 0 14 44" width="26" alt="Logo DevPhone" />
+            </a>
+        </div>
+
+        <nav class="menu">
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="produtos.html">Produtos</a></li>
+            <li><a href="suporte.html">Suporte</a></li>
+            <li><a href="apresentacao.html">Apresentação</a></li>
+            </ul>
+        </nav>
+
+        <div class="icons">
+
+            <button aria-label="Pesquisar" class="icon-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="44px" viewBox="0 0 15 44">
+                <path d="M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.55,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z M1.55,20c0-2.454,1.997-4.45,4.45-4.45 c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z"></path>
+                </svg>
+            </button>
+
+            <button aria-label="Carrinho" class="icon-cart">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 0 17 48" width="17" >
+                <path d="m13.4575 16.9268h-1.1353a3.8394 3.8394 0 0 0 -7.6444 0h-1.1353a2.6032 2.6032 0 0 0 -2.6 2.6v8.9232a2.6032 2.6032 0 0 0 2.6 2.6h9.915a2.6032 2.6032 0 0 0 2.6-2.6v-8.9231a2.6032 2.6032 0 0 0 -2.6-2.6001zm-4.9575-2.2768a2.658 2.658 0 0 1 2.6221 2.2764h-5.2442a2.658 2.658 0 0 1 2.6221-2.2764zm6.3574 13.8a1.4014 1.4014 0 0 1 -1.4 1.4h-9.9149a1.4014 1.4014 0 0 1 -1.4-1.4v-8.9231a1.4014 1.4014 0 0 1 1.4-1.4h9.915a1.4014 1.4014 0 0 1 1.4 1.4z"></path>
+                </svg>
+            </button>
+
+        </div>
+                
+    </header>
+    <!-- Aqui termina o conteúdo de cabeçalho do site -->
+
+    <!-- Aqui vai o conteúdo principal do site -->
+    <main>
+
+        <div class="promo-ribbon">
+            <div class="ribbon-content">
+                <p>Pague seu novo DevPhone em até 12 parcelas ou economize 10% nos pagamentos à vista. 
+                <a href="/financiamento" class="ribbon-link">Saiba mais</a>
+                </p>
+            </div>
+        </div>
+         
+        <div class="product-hero">
+            <div class="product-title">DevPhone</div>
+            <div class="product-tagline"><p>Pensado para encantar.</p>
+            </div>
+        </div>
+
+        <section class="video-hero">
+            <div class="video-wrapper">
+                <video
+                class="welcome-video"
+                autoplay
+                muted
+                playsinline
+                src="/public/assets/videos/video2.mp4"
+                ></video>
+
+                <!-- Botão sobre o vídeo -->
+                <button class="video-pause-btn" id="pauseBtn" aria-label="Pausar vídeo" >❚❚</button>
+            </div>
+        </section>
+
+        <section class="devphone-section">
+            <h2 class="section-title">Conheça melhor o DevPhone.</h2>
+            <div class="carousel-container">
+        </section>
+        
+        <section class="card-carousel">
+            <div class="carousel-container"  id="carousel">
+                
+                <div class="card" style="background-image: url('/public/assets/images/CARD1.jpg');">
+                <div class="card-content">
+                    <h3 class="card-title">Dev Intelligence</h3>
+                    <p class="card-description">Possibilidades poderosas</p>
+                    <button class="card-button">+</button>
+                </div>
+                </div>
+
+                <div class="card" style="background-image: url('/public/assets/images/CARD2.jpg');">
+                <div class="card-content">
+                    <h3 class="card-title">Câmeras de última geração</h3>
+                    <p class="card-description">Temos fotos e vídeos para provar.</p>
+                    <button class="card-button">+</button>
+                </div>
+                </div>
+
+                <div class="card" style="background-image: url('/public/assets/images/CARD3.jpg');">
+                <div class="card-content">
+                    <h3 class="card-title">Chip e Bateria</h3>
+                    <p class="card-description">Desempenho longa vida.</p>
+                    <button class="card-button">+</button>
+
+                </div>
+                </div>              
+                <div class="card" id="text-black" style="background-image: url('/public/assets/images/CARD4.jpg');">
+                <div class="card-content"> 
+                    <h3 class="card-title">Inovação</h3>
+                    <p class="card-description">Projetado para durar. E impressionar.</p>
+                    <button class="card-button">+</button>
+                </div>
+                </div>   
+
+                <div class="card" id="text-black" style="background-image: url('/public/assets/images/CARD5.jpg');">
+                <div class="card-content">
+                    <h3 class="card-title">Meio ambiente</h3>
+                    <p class="card-description">Reciclar. Reutilizar. Repetir.</p>
+                    <button class="card-button">+</button>
+                </div>
+                </div>       
+                
+                <div class="card" style="background-image: url('/public/assets/images/CARD6.jpg');">
+                <div class="card-content">
+                    <h3 class="card-title">Privacidade</h3>
+                    <p class="card-description">Seus dados. Sempre nas suas mãos.</p>
+                    <button class="card-button">+</button>
+                </div>
+                </div>     
+
+                <div class="card" style="background-image: url('/public/assets/images/CARD7.jpg');">
+                <div class="card-content">
+                    <h3 class="card-title">Personalize seu DevPhone</h3>
+                    <p class="card-description">Espelho, espelho seu.</p>
+                    <button class="card-button">+</button>
+                </div>
+                </div>     
+
+                <div class="card" style="background-image: url('/public/assets/images/CARD8.jpg');">
+                <div class="card-content">
+                    <h3 class="card-title">Tranquilidade</h3>
+                    <p class="card-description">Recursos de segurança. Vai que você precisa.</p>
+                    <button class="card-button">+</button>
+                </div>
+                </div>     
+
+                <div class="carousel-controls">
+                    <button class="carousel-button prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M21.559,12.062 L15.618,17.984 L21.5221,23.944 C22.105,24.533 22.1021,25.482 21.5131,26.065 C21.2211,26.355 20.8391,26.4999987 20.4571,26.4999987 C20.0711,26.4999987 19.6851,26.352 19.3921,26.056 L12.4351,19.034 C11.8531,18.446 11.8551,17.4999987 12.4411,16.916 L19.4411,9.938 C20.0261,9.353 20.9781,9.354 21.5621,9.941 C22.1471,10.528 22.1451,11.478 21.5591,12.062 L21.559,12.062 Z"></path></svg></button>
+                    <button class="carousel-button next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36"><path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path></svg></button>
+                </div>
+
+            </div>
+        </section>
+
+                
+        <section id="Devphone-benefits">
+            <div class="benefits-container">
+                <h1 class="benefits-title">Motivos para comprar<br>seu DevPhone agora!</h1>
+
+                <div class="benefits-cta">
+                    <a href="#" class="cta-link">Comprar DevPhone &gt;</a>
+                </div>
+
+                <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon"><img src="./assets/images/icon_card.png" viewBox="0 0 14 44" width="48" alt="Icon de cartão" /></div>
+                    <h2 class="benefit-heading">Opções de pagamento.</h2>
+                    <p class="benefit-description">Aproveite e parcele com facilidade e conveniência.</p>
+                    <div class="benefit-plus">+</div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon"><img src="./assets/images/icon_delivery.png" viewBox="0 0 14 44" width="48" alt="Icon de cartão" /></div>
+                    <h2 class="benefit-heading">Frete grátis.</h2>
+                    <p class="benefit-description">Em todo o Brasil. Em São Paulo, os pedidos qualificados têm envio no dia seguinte.</p>
+                    <div class="benefit-plus">+</div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon"><img src="./assets/images/icon_specialist.png" viewBox="0 0 14 44" width="48" alt="Icon de cartão" /></div>
+                    <h2 class="benefit-heading">Compre com quem entende de DevPhone.</h2>
+                    <p class="benefit-description">Fale com especialistas para fazer a melhor escolha. Na loja ou online.</p>
+                    <div class="benefit-plus">+</div>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon"><img src="./assets/images/icon_asa.png" viewBox="0 0 14 44" width="48" alt="Icon de cartão" /></div>
+                    <h2 class="benefit-heading">Uma experiência de compra inspirada em você.</h2>
+                    <p class="benefit-description">App Dev Store. Um jeito mais pessoal de comprar.</p>
+                    <div class="benefit-plus">+</div>
+                </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+    <!-- Aqui termina o conteúdo principal do site -->
+
+    <!-- Aqui vai o conteúdo de rodapé do site -->
+    <!-- Aqui vai o conteúdo de rodapé do site -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <h2 class="visually-hidden">Rodapé</h2>
+
+            <section class="footer-notes" aria-label="Notas de rodapé">
+            <ul>
+                <br>
+                <li></li>
+                <li> Alguns recursos podem não estar disponíveis em todas as regiões ou idiomas.</li>
+                <li>* Parcelamento sem juros ou 10% de desconto à vista.</li>
+                <li>1. O recurso Dev Intelligence está disponível em versão beta com DevOS 18 nos modelos DevPhone 16, 16 Plus, 16 Pro e 16 Pro Max, e também no DevPhone 15 Pro e 15 Pro Max.</li>
+                <li>2. O idioma precisa estar configurado em português (Brasil) ou em idiomas compatíveis.</li>
+                <li>3. O Modo Cinema funciona a partir do DevPhone 13.</li>
+                <li>4. O Modo Ação está disponível nos modelos DevPhone 14 e superiores.</li>
+                <li>5. Mixagem de Áudio está presente nos modelos DevPhone 16, incluindo o 16e.</li>
+                <li>6. A estimativa de bateria refere-se aos modelos maiores e pode variar com base na rede, uso e configurações.</li>
+                <li>7. A bateria possui ciclos limitados e pode precisar ser substituída com o tempo.</li>
+                <li>8. O 5G está disponível apenas em regiões e operadoras específicas.</li>
+                <li>9. Os modelos DevPhone 16 são resistentes à água, respingos e poeira (IP68), mas essa resistência pode diminuir com o tempo.</li>
+                <li>10. Não tente recarregar um DevPhone molhado.</li>
+                <li>11. Os acessórios são vendidos separadamente.</li>
+                <li>12. O cabo USB-C incluído é compatível com DevBuds Pro (2ª geração).</li>
+                <li>13. Para usar o Dev Pay, é necessário um cartão e banco compatíveis.</li>
+                <li>14. O detector de acidentes está disponível a partir do DevPhone 14 e requer rede móvel ou Wi-Fi.</li>
+                <li>15. A IDev Visual está disponível a partir do DevOS 18.2 no DevPhone 16 e a partir do DevOS 18.4 no DevPhone 15 Pro/Max.</li>
+                <li>16. Requer chip de banda ultralarga de segunda geração.</li>
+                <li>17. Alguns modelos vendidos nos EUA usam apenas eSIM e não têm entrada para chip físico.</li>
+                <li>18. Os recursos estão sujeitos a mudanças e podem variar por região, idioma ou modelo.</li>
+                <li>Os recursos estão sujeitos a disponibilidade e condições específicas.</li>
+                <li>Requer assinatura e pode ter restrições regionais.</li>
+            </ul>
+            </section>
+
+            <section class="footer-local" aria-label="Local de navegação do rodapé">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="" class="breadcrumb-home">
+                        <span class="breadcrumb-icon" aria-hidden="true"><img src="./assets/images/logo.svg" alt="logo do rodapé"></span>       
+                    </a>
+                    <span class="breadcrumb-chevron">›</span>
+                    <span class="breadcrumb-item" property="name">Produtos</span>
+                </nav>
+            </section>
+
+            <nav class="footer-directory" aria-label="Navegação do rodapé">
+
+            <!-- Coluna 1 -->
+            <div class="footer-column">
+                <h3 class="footer-title">
+                <span>Produtos</span>
+                </h3>
+                <ul class="footer-column-list">
+                <li><a href="#" class="footer-link">Loja</a></li>
+                <li><a href="#" class="footer-link">Ofertas</a></li>
+                <li><a href="#" class="footer-link">Acessórios</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 2 -->
+            <div class="footer-column">
+                <h3 class="footer-title">
+                <span>Conta</span>
+                </h3>
+                <ul class="footer-column-list">
+                <li><a href="#" class="footer-link">Gerenciar Conta</a></li>
+                <li><a href="#" class="footer-link">Armazenamento</a></li>
+                <li><a href="#" class="footer-link">Configurações</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3 -->
+            <div class="footer-column">
+                <h3 class="footer-title">
+                <span>Suporte</span>
+                </h3>
+                <ul class="footer-column-list">
+                <li><a href="#" class="footer-link">Ajuda</a></li>
+                <li><a href="#" class="footer-link">Encontre uma Loja</a></li>
+                <li><a href="#" class="footer-link">Contato</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 4 -->
+            <div class="footer-column">
+                <h3 class="footer-title">
+                <span>Empresa</span>
+                </h3>
+                <ul class="footer-column-list">
+                <li><a href="#" class="footer-link">Sobre Nós</a></li>
+                <li><a href="#" class="footer-link">Carreiras</a></li>
+                <li><a href="#" class="footer-link">Privacidade</a></li>
+                </ul>
+            </div>
+            </nav>
+
+            <section class="footer-bottom">
+            <div class="footer-shop">
+                <p>Outras formas de comprar: <a href="#">encontre uma loja</a> ou <a href="#">revendedor autorizado</a>. Ligue <a>0110-0111-0110-0110</a>.</p>
+                <p>Serviços fornecidos por DevPhone Computer Brasil LTDA.</p>
+            </div>
+
+            <div class="footer-legal">
+                <p>&copy; 2025 DevPhone. Todos os direitos reservados.</p>
+                <ul class="footer-links">
+                <li><a href="#"> Política de Privacidade  |</a></li>
+                <li><a href="#"> Termos de Uso  |</a></li>
+                <li><a href="#"> Reembolsos  |</a></li>
+                <li><a href="#"> Avisos Legais  |</a></li>
+                <li><a href="#"> Mapa do Site  |</a></li>
+                <br>
+                <br>
+                <br>
+                </ul>
+            </div>
+            </section>
+        </div>
+    </footer>
+
+    <!-- Aqui termina o conteúdo de rodapé do site -->
+     
+    <!-- scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/pause.js"></script>
+    <script src="js/carousel.js"></script>     
+    <!-- Configuração e inicialização do Lenis: rolagem suave -->
+    <script defer src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer ></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const lenis = new Lenis();
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+        });
+    </script>
+</body>
+</html>

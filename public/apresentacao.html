@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Central de Apresentação</title>
+  <link rel="stylesheet" href="./css/apresentacao.css" />
+  <link rel="icon" type="image/png" href="./assets/images/apple.png">
+</head>
+<body>
+
+  <div id="starwars-intro">
+    <audio id="intro-audio" autoplay muted>
+      <source src="./assets/music/music.mp3" type="audio/mpeg">
+    </audio>
+    <canvas id="stars"></canvas>
+    <section class="crawl">
+      <div class="title">
+        <p>Atividade MAPA – Front-End</p>
+        <h1>Guilherme Ferreira</h1>
+      </div>
+      <p>
+        Em uma galáxia muito, muito distante... estudantes de tecnologia <br>
+        lutavam contra os bugs com sabres de lógica e forças do CSS. <br>
+        Navegando pelos confins do universo digital, eles dominaram a arte do HTML5, <br>
+        o poder místico do CSS3 e a agilidade do JavaScript para criar experiências <br>
+        que desafiam a gravidade do comum. Entre estrelas codificadas e nebulosas de <br>
+        criatividade, este projeto foi desenvolvido como parte do módulo de Front-End <br>
+        da faculdade Unicesumar, onde aprendizes se tornam verdadeiros mestres do desenvolvimento web.<br>
+        Guiado por um design inspirado na elegância da Apple, a missão era clara:<br>
+        construir uma interface que fosse ao mesmo tempo intuitiva, moderna e poderosa. <br>
+        Capaz de resistir aos ataques dos erros de sintaxe e às tempestades do layout quebrado. <br>
+        Com muita persistência, cafés galácticos e uma pitada de força Jedi, o resultado foi uma aplicação <br>
+        que brilha mais que um sabre de luz em batalha.<br>
+        Que a força do código esteja com você nessa jornada digital!<br>
+      </p>
+    </section>
+    <button id="skip-intro">&#187; Pular</button>
+  </div>
+
+
+  <div class="container">
+    <header>
+      <img src="./assets/images/logo.svg" alt="Logo DevPhone" class="logo" />
+      <h1>Central de Apresentação</h1>
+      <p>Escolha para onde deseja ir.</p>
+    </header>
+
+    <nav class="link-grid">
+      <a href="index.html" class="link-card">
+        <h2>Home</h2>
+        <p>Página principal.</p>
+      </a>
+      <a href="produtos.html" class="link-card">
+        <h2>Produtos</h2>
+        <p>Página de apresentação do DevPhone.</p>
+      </a>
+      <a href="suporte.html" class="link-card">
+        <h2>Suporte</h2>
+        <p>Página com o objetivo de prestar suporte aos dispositivos da marca fictícia.</p>
+      </a>
+    </nav> 
+
+    <section class="about-section">
+        <h2>Sobre este projeto</h2>
+        <p>
+            Este site foi desenvolvido como parte de um trabalho acadêmico <strong>MAPA</strong> do módulo de <strong>Front-End</strong>
+            da faculdade <strong>Unicesumar</strong>, no curso de <strong>Engenharia de Software</strong>.
+            Projeto criado por <strong>Guilherme Ferreira</strong> em <strong>junho de 2025</strong>, com foco em desenvolvimento
+            <strong>HTML5</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>, com design inspirado no estilo do site da <strong>Apple</strong>.
+        </p>
+
+        <p>
+            Algumas imagens presentes neste site foram utilizadas exclusivamente com propósitos educacionais para compor o trabalho acadêmico.
+        </p>
+
+        <h3 class="section-subtitle">📁 Estrutura do Projeto</h3>
+
+        <ul class="project-structure">
+            <li>
+            <strong>src/</strong> – Código-fonte principal do projeto (componentes, estilos, scripts, rotas, etc.).
+            </li>
+            <li>
+            <strong>public/</strong> – Arquivos públicos acessíveis diretamente, como imagens e index.html.
+            </li>
+            <li>
+            <strong>docs/</strong> – Documentação do projeto ou build estático para deploy no GitHub Pages.
+            </li>
+            <li>
+            <strong>build/</strong> (ou <strong>dist/</strong>) – Versão final e otimizada do projeto para produção.
+            </li>
+            <li>
+            Pastas vazias são mantidas com arquivos <code>.gitkeep</code>, pois o Git não versiona diretórios vazios.
+            </li>
+        </ul>
+
+        <p><strong>💡 Observação:</strong> O trabalho exige <strong>responsividade</strong> como critério obrigatório de avaliação.</p>
+    </section>
+
+    <section class="project-section">
+        <h2>Atividade MAPA – Programação Front-End</h2>
+        <p>
+          Este website foi desenvolvido com base em uma proposta de tema livre, com foco em uma estética moderna e responsiva. A inspiração principal veio do <strong>design da Apple</strong>, especialmente das páginas relacionadas ao iPhone e ao suporte.
+        </p>
+        <p>Referências utilizadas:</p>
+        <a href="https://www.apple.com/br/" target="_blank">Página oficial da Apple Brasil ↗</a><br>
+        <a href="https://www.apple.com/br/iphone/" target="_blank">Página do iPhone ↗</a><br>
+        <a href="https://support.apple.com/pt-br?cid=gn-ols-home-hp-tab" target="_blank">Página de Suporte ↗</a><br>
+        <br>
+        <h3>Hospedagem</h3><br>
+        <p>
+        O site foi hospedado na plataforma <strong>Vercel</strong>, permitindo fácil acesso online ao projeto final.
+        </p>
+        <br>
+        <h3>Funcionalidades com JavaScript</h3><br>
+        <p>Foram implementados recursos interativos com JavaScript nas seguintes páginas:</p>
+        <ul>
+          <strong>Home:</strong> efeitos visuais nas seções principais.<br>
+          <strong>Produtos:</strong> animação de vídeo na apresentação do produto e carrossel de imagens interativo. <br>
+          <strong>Suporte:</strong> efeitos visuais e dinâmicos para melhor usabilidade.
+        </ul>
+        <br>
+        <h3>Metodologia de Desenvolvimento</h3><br>
+        <p>
+          Para aproximar o visual do site ao da Apple, utilizei a ferramenta <code>F12</code> do navegador para inspecionar e entender a estrutura, estilos e animações do site original.
+          Com base nisso, desenvolvi minha própria versão utilizando <strong>HTML5, CSS3 e JavaScript</strong>, respeitando o tema livre e aplicando <em>liberdade criativa</em> onde necessário.
+        </p>
+        <h3>Página de Apresentação</h3><br> 
+        <p>
+          Criei também uma página específica para apresentar o projeto, sem inspiração direta. A ideia foi deixar o projeto mais organizado, documentado e visualmente agradável, 
+          funcionando como uma introdução útil para futuras revisitas ou para facilitar a leitura do relatório online.
+        </p>
+
+        <h3 class="section-subtitle">🎯 Objetivo:
+        Desenvolver um website completo e responsivo usando HTML5, CSS3 e JavaScript.</h3>
+
+        <ul class="project-structure">
+            <li>
+            <strong>1° </strong> Tema livre (ex: portfólio, blog, loja virtual, etc.)
+            </li>
+            <li>
+            <strong>2° </strong> Pelo menos 4 páginas interligadas.
+            </li>
+            <li>
+            <strong>3° </strong> Layout responsivo
+            </li>
+            <li>
+            <strong>4° </strong> Menu de navegação funcional
+            </li>
+            <li>
+            <strong>5° </strong> Formulário de contato com validação via JavaScript
+            </li>
+            <li>
+            <strong>6° </strong> Pelo menos 2 efeitos interativos com JavaScript/jQuery
+            </li>
+            <li>
+            <strong>7° </strong> Aplicação de conceitos básicos de SEO
+            </li>
+        </ul>
+
+        <p><strong>📦 Entrega:</strong> Enviar um arquivo <strong>.ZIP</strong> com o <strong>código-fonte completo</strong> e o <strong>relatório</strong></p>
+    </section>
+
+    <nav class="pdf-link">
+      <a href="../docs/relatório.pdf" download>
+        <h2>relatório do projeto</h2>
+        <p>📥 Baixar PDF</p>
+      </a>
+    </nav>
+
+    <section class="feedback-section">
+      <div class="feedback-container">
+        <h2>📣 Envie seu Feedback</h2>
+        <form id="feedback-form">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Escreva aqui..."></textarea>
+
+          <button type="submit">Enviar</button>
+          <p id="status" style="margin-top: 15px;"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="social-links">
+      <h3>Redes sociais</h3>
+      <ul>
+        <li><a href="https://github.com/GuilhermeF-R/FrontendAcademic-Project" target="_blank">GitHub</a></li>
+        <li><a href="https://www.instagram.com/devgferreira/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@devgferreira" target="_blank">TikTok</a></li>
+        <li><a href="https://www.linkedin.com/in/guilherme-ferreira-25738427a/" target="_blank">LinkedIn</a></li>
+      </ul>
+      <p id="music-credit" style="text-align: center; color: #2c2802; font-size: 12px; font-family: Arial, sans-serif; margin-top: 8px;">
+        Música da intro por <a href="https://www.youtube.com/watch?v=-nk5ig_1BIA&list=RD-nk5ig_1BIA&start_radio=1" target="_blank" rel="noopener noreferrer" style="margin-left: 5px; color: #424242; text-decoration: none;"> Star Wars - The Force Theme (Far Out Remix) - YouTube</a>
+      </p>
+
+    </footer>
+  </div>
+
+  <!-- scripts -->
+   <!-- Configuração de animação -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./js/scrollAnimation.js" defer></script> 
+  <!-- Configuração de formulario -->
+  <script src="./js/formdiscord.js" defer ></script>
+  <script defer src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js" defer ></script>
+  <!-- Configuração das estrelas -->
+  <script src="./js/stars.js" defer ></script>
+  <!-- Configuração e inicialização do Lenis: rolagem suave -->
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+          const lenis = new Lenis();
+
+          function raf(time) {
+              lenis.raf(time);
+              requestAnimationFrame(raf);
+          }
+
+          requestAnimationFrame(raf);
+      });
+    </script>
+
+</body>
+</html>

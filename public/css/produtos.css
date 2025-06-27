@@ -1,0 +1,871 @@
+/* ============================= */
+/* 1. ROOT VARIABLES & RESET    */
+/* ============================= */
+:root {
+  --r-globalnav-color: #333;
+  --text-color: #1d1d1f;
+  --background-color: #f5f5f7;
+  --button-primary-bg: #0071e3;
+  --button-primary-color: #fff;
+  --button-tertiary-bg: transparent;
+  --button-tertiary-color: #0071e3;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #fff;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+img, svg {
+  user-drag: none;
+  user-select: none;
+  pointer-events: auto;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+/* ============================= */
+/* 2. HEADER & NAVIGATION       */
+/* ============================= */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  height: 44px;
+  padding: 0 16px;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: var(--r-globalnav-color);
+  line-height: 2;
+  letter-spacing: -0.01em;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.logo img {
+  height: 24px;
+}
+
+.logo img:hover {
+  filter: invert(30%);
+  transition: filter 0.1s;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 8px;
+  color: var(--r-globalnav-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: rgb(104, 104, 104);
+  text-decoration: none;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--r-globalnav-color);
+  font-size: 18px;
+  padding: 0;
+  line-height: 1;
+}
+
+.icons button:hover {
+  fill: gray;
+}
+
+/* ============================= */
+/* 3. PROMO RIBBON              */
+/* ============================= */
+.promo-ribbon {
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.42859;
+  letter-spacing: -0.016em;
+  padding: 1px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ribbon-content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.ribbon-link {
+  color: #0066cc;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.ribbon-link:hover {
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* 4. VIDEO HERO SECTION        */
+/* ============================= */
+.video-hero {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all 0.6s ease;
+}
+
+.welcome-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: sticky;
+  top: 0;
+  z-index: -1;
+  transition: transform 0.6s ease, border-radius 0.6s ease, height 0.6s ease, border 0.6s ease;
+  border: none;
+}
+
+.video-pause-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: rgba(100, 100, 100, 0.7);
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.video-pause-btn:hover {
+  background-color: rgba(165, 165, 165, 0.9);
+}
+
+.video-hero.shrink .video-wrapper {
+  transform: scale(0.9) translateY(-30px);
+  height: 90vh;
+  border-radius: 20px;
+}
+
+.video-hero.shrink .welcome-video {
+  border-radius: 20px;
+}
+
+/* ============================= */
+/* 5. MAIN / HERO TEXT          */
+/* ============================= */
+.main {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.product-hero {
+  width: 87.5vw;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.product-title {
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: #1d1d1f;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+}
+
+.product-tagline p {
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 1.14286;
+  letter-spacing: 0.004em;
+  color: #1d1d1f;
+  margin: 0;
+  text-align: right;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+}
+
+/* ============================= */
+/* 6. DEVPHONE SECTION          */
+/* ============================= */
+.devphone-section {
+  display: flex;
+  margin: 0 auto;
+  padding: 110px;
+  margin-top: -75px;
+  margin-bottom: -105px;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #1d1d1f;
+}
+
+/* ============================= */
+/* 7. CAROUSEL CARDS            */
+/* ============================= */
+.card-carousel {
+  margin-bottom: 40px;
+  position: relative;
+  padding: 75px;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: hidden;
+  padding: 0 20px;
+  flex-wrap: nowrap;
+  scroll-behavior: smooth;
+}
+
+.card {
+  width: 405px;
+  height: 720px;
+  flex: 0 0 auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(0.99);
+}
+
+.card-content {
+  height: 100%;
+  padding: 20px;
+  color: white;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.27));
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-description {
+  font-size: 25.2px;
+  font-weight: bold;
+  margin-top: 8px;
+  max-width: 80%;
+}
+
+#text-black .card-title,
+#text-black .card-description {
+  color: #000;
+}
+
+.card-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(100, 100, 100, 0.7);
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: rgba(165, 165, 165, 0.9);
+}
+
+.carousel-controls {
+  position: absolute;
+  bottom: -5px; /* distância do fundo do carrossel */
+  right: 70px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+}
+
+.carousel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 28px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(100, 100, 100, 0.7);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-button:hover {
+  background-color: rgba(165, 165, 165, 0.9);
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* ============================= */
+/* 8. BENEFITS SECTION          */
+/* ============================= */
+#Devphone-benefits {
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  padding: 60px 20px;
+}
+
+.benefits-container {
+  margin: 0 auto;
+  padding: 75px;
+  text-align: left;
+}
+
+.benefits-title {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #1d1d1f;
+}
+
+.benefits-grid {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+}
+
+.benefit-card {
+  background-color: #fff;
+  border-radius: 28px;
+  padding: 30px 24px;
+  flex: 1 1 240px;
+  min-width: 260px;
+  min-height: 240px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.2s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.benefit-card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.benefit-icon {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.benefit-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.benefit-description {
+  font-size: 17px;
+  color: #6e6e73;
+  line-height: 1.4;
+}
+
+.benefit-plus {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 28px;
+  height: 28px;
+  font-size: 20px;
+  background-color: #1d1d1f;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.benefits-cta {
+  position: relative;
+  top: -50px;
+  text-align: right;
+}
+
+.cta-link {
+  font-size: 16px;
+  color: #0071e3;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.cta-link:hover {
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* 9. FOOTER - ESTRUTURA GERAL  */
+/* ============================= */
+.footer {
+  background-color: rgb(238, 238, 241);
+  color: #86868b;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.33337;
+  min-width: 1024px;
+  font-family: 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  overflow: hidden;
+}
+
+.footer-content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+/* ============================= */
+/* 10. FOOTER - NOTAS           */
+/* ============================= */
+.footer-notes {
+  border-bottom: 1px solid #d2d2d7;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-notes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-notes li {
+  margin-bottom: 8px;
+}
+
+/* ============================= */
+/* 11. FOOTER - BREADCRUMB      */
+/* ============================= */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #6e6e73;
+  margin: 10px 0 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d2d2d7;
+}
+
+.breadcrumb-home {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-home:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-icon img {
+  height: 24px;
+}
+
+.breadcrumb-icon img:hover {
+  filter: invert(30%);
+  transition: filter 0.1s;
+}
+
+.breadcrumb-chevron {
+  margin: 0 8px;
+}
+
+.breadcrumb-item {
+  color: #6e6e73;
+}
+
+/* ============================= */
+/* 12. FOOTER - COLUNAS         */
+/* ============================= */
+.footer-directory {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1d1d1f;
+  display: flex;
+  align-items: center;
+}
+
+.footer-column-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-link {
+  color: #888888;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+/* ============================= */
+/* 13. FOOTER - PARTE INFERIOR  */
+/* ============================= */
+.footer-bottom {
+  border-top: 1px solid #d2d2d7;
+  padding-top: 20px;
+}
+
+.footer-shop {
+  margin-bottom: 10px;
+}
+
+.footer-shop a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.footer-shop a:hover {
+  text-decoration: underline;
+}
+
+/* ============================= */
+/* 14. FOOTER - LEGAL & LINKS   */
+/* ============================= */
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-legal p {
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 5px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.footer-links li a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.footer-links li a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+
+/* ============================= */
+/* 15. UTILIDADES               */
+/* ============================= */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* ============================= */
+/* 10. MEDIA QUERIES / RESPONSIVIDADE */
+/* ============================= */
+@media (max-width: 480px) {
+/* header */
+  header {
+    margin-left: -20px;
+  }
+
+  .icons button {
+    font-size: 14px;
+  }
+  
+  .product-title {
+    font-size: 70px;
+    text-align: left;
+    margin-left: -30px;
+  }
+
+  .product-tagline p {
+    text-align: left;
+    margin-left: -30px;
+    font-size: 27px;
+  }
+  
+  .card {
+    width: 100% !important;
+    height: 540px !important;
+  }
+
+  .card:hover {
+    transform: scale(1);
+  }
+
+  .carousel-container {
+    gap: 20px;
+    padding: 0 0 0;
+  }
+  
+  .section-title {
+    font-size: 29.6px !important;
+    text-align: left;
+  }
+  
+  .benefits-title {
+    margin-top: -65px;
+    font-size: 29.6px !important;
+    text-align: left;
+    margin-left: -20px;
+  }
+  
+  .benefits-cta {
+    text-align: left;
+    margin-top: 65px;
+    margin-left: -20px;
+  }
+
+
+}
+@media (max-width: 790px) {
+  /* header */
+  header {
+    font-size: 10px;
+    padding: 0 30px;
+    height: 40px;
+    justify-content: space-between;
+  }
+
+  .logo img {
+    height: 20px;
+  }
+
+  .menu ul {
+    gap: 8px;
+  }
+
+  .menu a {
+    padding: 0 5px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .icons button {
+    font-size: 14px;
+  }
+
+  /* main */
+  .promo-ribbon {
+    font-size: 12px;
+  }
+
+  .ribbon-content {
+    padding: 0 16px;
+  }
+
+  .product-hero {
+    font-size: 70px;
+    margin-left: 60px;
+  }
+
+  .product-title {
+    font-size: 70px;
+  }
+
+  .video-hero.shrink .video-wrapper {
+    height: 75vh;
+  }
+  
+  .devphone-section {
+      padding: 80px 30px 30px;
+  }
+
+  .section-title {
+    font-size: 33.3px;
+    text-align: left;
+  }
+
+  .card {
+    width: 100% !important;
+    height: 540px;
+  }
+
+  .benefits-container {
+    padding: 80px 30px 30px !important;
+  }
+
+
+  .footer-column {
+    min-width: 100%;
+  }
+
+  .footer-legal {
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .benefits-title {
+    margin-top: -65px;
+    font-size: 33.3px;
+    text-align: left;
+    margin-left: -20px;
+  }
+
+  .benefits-cta {
+    text-align: left;
+    margin-top: 65px;
+    margin-left: -20px;
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .card{
+    width: 43%;
+  }
+
+  .benefits-grid {
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+  }
+
+
+  .footer {
+    min-width: 320px;
+  }
+
+  .footer-column {
+    min-width: 50%;
+  }
+}
+
+@media (max-width: 1450px) {
+  .benefits-grid {
+      flex-direction: column;
+      
+  }
+  .benefits-title {
+    margin-top: -65px;
+  }
+
+  .benefits-cta {
+    text-align: left;
+    margin-top: 65px;
+  }
+  
+}
+

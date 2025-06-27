@@ -1,0 +1,486 @@
+/* ==============================
+   RESET E CONFIGURAÇÃO GLOBAL
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;       /* centraliza horizontalmente */
+  justify-content: center;   /* (opcional) se quiser centralizar verticalmente */
+  text-align: center;        /* centraliza o texto */
+  padding: 20px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==============================
+        INTRO STAR WARS
+============================== */
+#starwars-intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: #ffe81f;
+  overflow: hidden;
+  font-family: 'Arial Black', sans-serif;
+  perspective: 700px;
+  z-index: 1;
+}
+
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#starwars-intro::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px; /* altura do sombreado */
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+  z-index: 2;
+}
+
+
+.crawl {
+  position: relative;
+  top: 100vh;
+  transform-origin: 50% 100%;
+  animation: crawl 25s linear forwards;
+  font-size: clamp(8px, 1vw, 11px);
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.crawl .title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* CSS simplificado */
+#skip-intro {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  background: transparent;
+  color: #ffe81f;
+  border: 2px solid #ffe81f;
+  border-radius: 5px;
+  font-size: 14px;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: none; /* **oculto até iniciar** */
+}
+
+@keyframes crawl {
+  0% {
+    top: 100vh;
+    transform: rotateX(10deg) translateZ(0); /* Diminui rotação para 10deg */
+  }
+  100% {
+    top: -300vh; /* Ajustei para o texto não ir tão longe */
+    transform: rotateX(15deg) translateZ(-300px); /* Menos translateZ para suavizar */
+  }
+}
+
+
+/* ==============================
+   CONTAINER PRINCIPAL
+============================== */
+.container {
+  max-width: 800px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* ==============================
+   LOGO E TIPOGRAFIA BÁSICA
+============================== */
+.logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 17px;
+  color: #6e6e73;
+  margin-bottom: 32px;
+}
+
+/* ==============================
+   GRID DE LINKS
+============================== */
+.link-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.link-card {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  width: 220px;
+  text-decoration: none;
+  color: #1d1d1f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.link-card h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.link-card p {
+  font-size: 15px;
+  color: #6e6e73;
+}
+
+/* ==============================
+   SESSÃO "ABOUT"
+============================== */
+.about-section {
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  line-height: 1.6;
+  font-size: 16px;
+  color: #1d1d1f;
+}
+
+.about-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.about-section h3.section-subtitle {
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.about-section .project-structure {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.about-section .project-structure li {
+  margin-bottom: 8px;
+}
+
+/* ==============================
+   SESSÃO DE PROJETOS
+============================== */
+.project-section {
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  line-height: 1.6;
+  font-size: 16px;
+  color: #1d1d1f;
+}
+
+.project-section h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.project-section h3.section-subtitle {
+  margin-top: 24px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.project-section .project-structure {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.project-section .project-structure li {
+  margin-bottom: 8px;
+}
+
+/* ==============================
+   LINK PARA PDF
+============================== */
+.pdf-link {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  width: 760px;
+  text-decoration: none;
+  color: #1d1d1f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  cursor: pointer;
+}
+
+.pdf-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.pdf-link a {
+  display: inline-block;
+  background-color: rgba(126, 124, 124, 0.07);
+  color: rgb(48, 48, 49);
+  text-decoration: none;
+  padding: 16px 24px;
+  width: 700px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.pdf-link a:hover {
+  background-color: rgba(124, 124, 124, 0.17);
+}
+
+.pdf-link h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.pdf-link p {
+  font-size: 14px;
+  margin-top: 48px;
+  color: #6e6e73;
+}
+
+/* ==============================
+   FORMULÁRIO DE FEEDBACK
+============================== */
+.feedback-section {
+  background-color: #f5f5f7;
+  padding: 60px 20px;
+}
+
+.feedback-container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.feedback-container h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #1d1d1f;
+}
+
+.feedback-container p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+#feedback-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#feedback-form label {
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #1d1d1f;
+}
+
+#feedback-form input,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: none;
+}
+
+#feedback-form button {
+  margin-top: 20px;
+  padding: 14px;
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#feedback-form button:hover {
+  background-color: #005bb5;
+}
+
+.form-status {
+  margin-top: 20px;
+  font-weight: bold;
+  color: green;
+}
+
+/* ==============================
+   LINKS SOCIAIS
+============================== */
+.social-links {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.social-links h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.social-links ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #0066cc;
+  font-size: 16px;
+  transition: text-decoration 0.3s ease;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 768px) {
+  /* Reduz o padding geral do container */
+  .container {
+    padding: 30px 16px;
+  }
+
+  /* Ajusta largura dos cards */
+  .link-card {
+    width: 100%;
+  }
+
+  /* PDF link responsivo */
+  .pdf-link {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .pdf-link a {
+    width: 100%;
+    padding: 14px 16px;
+  }
+
+  /* Feedback container */
+  .feedback-container {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Títulos menores em telas pequenas */
+  h1 {
+    font-size: 22px;
+  }
+
+  h2, .link-card h2, .about-section h2, .project-section h2 {
+    font-size: 18px;
+  }
+
+  p, .link-card p, .pdf-link p {
+    font-size: 15px;
+  }
+
+  /* Padding geral reduzido */
+  .container,
+  .about-section,
+  .project-section {
+    padding: 20px 16px;
+  }
+
+  /* Ajuste para largura total */
+  .link-card,
+  .pdf-link,
+  .pdf-link a {
+    width: 100%;
+  }
+
+  /* Formulário de feedback responsivo */
+  #feedback-form input,
+  #feedback-form textarea {
+    font-size: 14px;
+  }
+
+  #feedback-form button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .feedback-container h2 {
+    font-size: 22px;
+  }
+
+  .social-links h3 {
+    font-size: 18px;
+  }
+
+  .social-links a {
+    font-size: 14px;
+  }
+}
