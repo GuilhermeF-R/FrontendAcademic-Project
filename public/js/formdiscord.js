@@ -89,7 +89,7 @@ form.addEventListener("submit", function(e) {
     return;
   }
 
-  const webhookURL = "";////////////////////////////////////////////////////////////
+  const webhookURL = "WEBHOOK_APP_URL";//////////////////////////////////////////////////////////// ⚠️
 
   const payload = {
     content: `📬 **Novo Feedback Recebido**\n👤 Nome: ${nome}\n📧 Email: ${email}\n💬 Mensagem: ${mensagem}`
