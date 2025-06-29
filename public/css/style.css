@@ -1,6 +1,6 @@
-/* ==========================
-   Variáveis Globais (Root)
-========================== */
+/* ==============================
+   RESET E CONFIGURAÇÃO GLOBAL
+============================== */
 :root {
   --r-globalnav-color: #333;
   --text-color: #1d1d1f;
@@ -11,10 +11,6 @@
   --button-tertiary-color: #0071e3;
 }
 
-
-/* ==========================
-   Reset & Base
-========================== */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -638,7 +634,7 @@ header {
 
 
 /* ==========================
-   UTILITÁRIOS E ACESSIBILIDADE
+   UTILITÁRIOS
 ========================== */
 .visually-hidden {
   position: absolute;
@@ -801,5 +797,4 @@ header {
   .phone-gallery {
     grid-template-columns: repeat(2, 1fr);
   }
-
 }

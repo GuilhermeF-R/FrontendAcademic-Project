@@ -27,7 +27,7 @@ body {
 }
 
 /* ==============================
-        INTRO STAR WARS
+    INTRO STAR WARS
 ============================== */
 #starwars-intro {
   position: fixed;
@@ -527,4 +527,3 @@ textarea {
     }
   }
 }
-

@@ -1,3 +1,6 @@
+/* ==============================
+   RESET E CONFIGURAÇÃO GLOBAL
+============================== */
 :root {
   --r-globalnav-color: #333;
   --text-color: #1d1d1f;
@@ -8,7 +11,6 @@
   --button-tertiary-color: #0071e3;
 }
 
-/* ========== BASE E RESET ========== */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -31,7 +33,9 @@ img, svg {
   -o-user-drag: none;
 }
 
-/* ========== HEADER ========== */
+/* ==========================
+   HEADER (Navegação)
+========================== */
 header {
   font-size: 12px;
   font-weight: 400;
@@ -61,7 +65,9 @@ header {
   transition: filter 0.1s;
 }
 
-/* ========== MENU DE NAVEGAÇÃO ========== */
+/* ==========================
+   HEADER (Navegação)
+========================== */
 .menu ul {
   list-style: none;
   display: flex;
@@ -85,7 +91,7 @@ header {
   color: rgb(104, 104, 104);
 }
 
-/* ========== ÍCONES HEADER ========== */
+
 .icons {
   display: flex;
   align-items: center;
@@ -106,7 +112,9 @@ header {
   fill: gray;
 }
 
-/* ========== CONTEÚDO PRINCIPAL ========== */
+/* ==========================
+   CONTEÚDO PRINCIPAL
+========================== */
 .main {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -128,7 +136,7 @@ header {
   position: relative;
 }
 
-/* ========== BANNER ========== */
+/* Banner / Imagem Principal */
 .unit-wrapper-banner {
   position: relative;
   width: 100%;
@@ -153,7 +161,9 @@ header {
   z-index: 0;
 }
 
-/* ========== SEÇÃO SUPORTE ========== */
+/* ==========================
+   SEÇÃO SUPORTE
+========================== */
 .suporte-section {
   display: flex;
   flex-direction: column;
@@ -199,7 +209,9 @@ header {
   margin-bottom: 10px;
 }
 
-/* ========== OPÇÕES RÁPIDAS ========== */
+/* ==========================
+   OPÇÕES RÁPIDAS
+========================== */
 .options-wrapper {
   display: flex;
   justify-content: center;
@@ -245,7 +257,9 @@ header {
   margin-bottom: 20px;
 }
 
-/* ========== BARRA DE PESQUISA ========== */
+/* ==========================
+   BARRA DE PESQUISA
+========================== */
 .search-wrapper {
   margin: 42px auto 0;
 }
@@ -297,7 +311,9 @@ header {
   border: 3.5px solid rgb(0, 174, 255);
 }
 
-/* ========== BANNER + GRID ========== */
+/* ==========================
+   BANNER + GRID
+========================== */
 .banner-row {
   background-color: #f5f5f7;
   margin-top: 68px;
@@ -387,8 +403,9 @@ header {
   color: #0066cc;
 }
 
-
-/* ========== BOXES E CONTEÚDOS ========== */
+/* ==========================
+   BOXES E CONTEÚDOS 
+========================== */
 .support-box {
  margin-left: auto;
  margin-right: auto;
@@ -481,7 +498,9 @@ header {
   position: relative;
 }
 
-/* ========== PROGRAMAS DE SERVIÇO ========== */
+/* ==========================
+   PROGRAMAS DE SERVIÇO
+========================== */
 .service-programs {
   padding: 50px 0;
   margin-bottom: -190px;
@@ -522,7 +541,9 @@ header {
   text-decoration: underline;
 }
 
-/* ========== RODAPÉ ========== */
+/* ==========================
+   RODAPÉ
+========================== */
 .footer {
   margin-top: 200px;
   background-color: #f5f5f7;
@@ -657,7 +678,9 @@ header {
   text-decoration: underline;
 }
 
-/* ========== UTILIDADES ========== */
+/* ==========================
+   UTILITÁRIOS
+========================== */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -674,7 +697,9 @@ header {
   white-space: nowrap;
 }
 
-/* ==========  MEDIA QUERIES / RESPONSIVIDADE ========== */
+/* ==========================
+   RESPONSIVIDADE
+========================== */
 @media (max-width: 480px) {
 /* header */
   header {
@@ -890,5 +915,4 @@ header {
     text-align: left;
     margin: -10;
   }
-
 }

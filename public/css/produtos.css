@@ -1,6 +1,6 @@
-/* ============================= */
-/* 1. ROOT VARIABLES & RESET    */
-/* ============================= */
+/* ==============================
+   RESET E CONFIGURAÇÃO GLOBAL
+============================== */
 :root {
   --r-globalnav-color: #333;
   --text-color: #1d1d1f;
@@ -33,9 +33,9 @@ img, svg {
   -o-user-drag: none;
 }
 
-/* ============================= */
-/* 2. HEADER & NAVIGATION       */
-/* ============================= */
+/* ==========================
+   HEADER (Navegação)
+========================== */
 header {
   display: flex;
   align-items: center;
@@ -109,9 +109,9 @@ header {
   fill: gray;
 }
 
-/* ============================= */
-/* 3. PROMO RIBBON              */
-/* ============================= */
+/* ============================ 
+   PROMO RIBBON              
+============================= */
 .promo-ribbon {
   background-color: #f5f5f7;
   color: #1d1d1f;
@@ -142,9 +142,9 @@ header {
   text-decoration: underline;
 }
 
-/* ============================= */
-/* 4. VIDEO HERO SECTION        */
-/* ============================= */
+/* ============================= 
+   VIDEO HERO SECTION        
+============================= */
 .video-hero {
   position: relative;
   overflow: hidden;
@@ -202,9 +202,9 @@ header {
   border-radius: 20px;
 }
 
-/* ============================= */
-/* 5. MAIN / HERO TEXT          */
-/* ============================= */
+/* =============================
+    MAIN / HERO TEXT         
+============================= */
 .main {
   background-color: var(--background-color);
   color: var(--text-color);
@@ -250,9 +250,9 @@ header {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
 }
 
-/* ============================= */
-/* 6. DEVPHONE SECTION          */
-/* ============================= */
+/* ============================= 
+   DEVPHONE SECTION          
+============================= */
 .devphone-section {
   display: flex;
   margin: 0 auto;
@@ -268,9 +268,9 @@ header {
   color: #1d1d1f;
 }
 
-/* ============================= */
-/* 7. CAROUSEL CARDS            */
-/* ============================= */
+/* ============================= 
+   CAROUSEL CARDS            
+============================= */
 .card-carousel {
   margin-bottom: 40px;
   position: relative;
@@ -392,9 +392,9 @@ button:disabled {
   cursor: default;
 }
 
-/* ============================= */
-/* 8. BENEFITS SECTION          */
-/* ============================= */
+/* ============================= 
+   BENEFITS SECTION         
+============================= */
 #Devphone-benefits {
   background-color: #f5f5f7;
   color: #1d1d1f;
@@ -486,9 +486,9 @@ button:disabled {
   text-decoration: underline;
 }
 
-/* ============================= */
-/* 9. FOOTER - ESTRUTURA GERAL  */
-/* ============================= */
+/* ============================= 
+   FOOTER - ESTRUTURA GERAL  
+ ============================= */
 .footer {
   background-color: rgb(238, 238, 241);
   color: #86868b;
@@ -506,9 +506,9 @@ button:disabled {
   padding: 0 22px;
 }
 
-/* ============================= */
-/* 10. FOOTER - NOTAS           */
-/* ============================= */
+/* ============================= 
+   FOOTER - NOTAS           
+ ============================= */
 .footer-notes {
   border-bottom: 1px solid #d2d2d7;
   padding-bottom: 20px;
@@ -525,9 +525,9 @@ button:disabled {
   margin-bottom: 8px;
 }
 
-/* ============================= */
-/* 11. FOOTER - BREADCRUMB      */
-/* ============================= */
+/* ============================= 
+   FOOTER - BREADCRUMB      
+============================= */
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -564,9 +564,9 @@ button:disabled {
   color: #6e6e73;
 }
 
-/* ============================= */
-/* 12. FOOTER - COLUNAS         */
-/* ============================= */
+/* ============================= 
+   FOOTER - COLUNAS         
+============================= */
 .footer-directory {
   display: flex;
   flex-wrap: wrap;
@@ -604,9 +604,9 @@ button:disabled {
   text-decoration-color: black;
 }
 
-/* ============================= */
-/* 13. FOOTER - PARTE INFERIOR  */
-/* ============================= */
+/* ============================= 
+   FOOTER - PARTE INFERIOR  
+ ============================= */
 .footer-bottom {
   border-top: 1px solid #d2d2d7;
   padding-top: 20px;
@@ -625,9 +625,9 @@ button:disabled {
   text-decoration: underline;
 }
 
-/* ============================= */
-/* 14. FOOTER - LEGAL & LINKS   */
-/* ============================= */
+/* =============================
+   FOOTER - LEGAL & LINKS   
+ ============================= */
 .footer-legal {
   display: flex;
   flex-direction: column;
@@ -658,9 +658,9 @@ button:disabled {
 }
 
 
-/* ============================= */
-/* 15. UTILIDADES               */
-/* ============================= */
+/* ============================= 
+   UTILIDADES              
+ ============================= */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -677,9 +677,9 @@ button:disabled {
   white-space: nowrap;
 }
 
-/* ============================= */
-/* 10. MEDIA QUERIES / RESPONSIVIDADE */
-/* ============================= */
+/* ==========================
+   RESPONSIVIDADE
+========================== */
 @media (max-width: 480px) {
 /* header */
   header {
@@ -868,4 +868,3 @@ button:disabled {
   }
   
 }
-
