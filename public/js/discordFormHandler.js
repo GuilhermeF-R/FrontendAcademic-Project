@@ -60,7 +60,7 @@ form.addEventListener("submit", function (e) {
   }
 
   const webhookURL = "https://eoxyaqhni4imh4a.m.pipedream.net"; // Seu webhook do Pipedream
-  const SECRET_KEY = "VERIFICADOR_@1gQBT"; // Substitua por sua chave real
+  const SECRET_KEY = "VERIFICADOR_@1gQBOT"; // Substitua por sua chave real
 
   const payload = {
     content: `📬 **Novo Feedback Recebido**\n👤 Nome: ${nome}\n📧 Email: ${email}\n💬 Mensagem: ${mensagem}`
