@@ -89,7 +89,7 @@ form.addEventListener("submit", function(e) {
     return;
   }
 
-  const webhookURL = "PIPEDREAM_ENDPOINT";//////////////////////////////////////////////////////////// ⚠️
+  const webhookURL = PIPEDREAM_ENDPOINT;//////////////////////////////////////////////////////////// ⚠️
 
   const payload = {
     content: `📬 **Novo Feedback Recebido**\n👤 Nome: ${nome}\n📧 Email: ${email}\n💬 Mensagem: ${mensagem}`
