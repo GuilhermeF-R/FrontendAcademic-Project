@@ -9,20 +9,8 @@ const MAX_LENGTHS = {
 };
 
 const SECRET_KEY = "VERIFICADOR_@1gQBOT"; // Chave secreta fixa
-
-let tokenTemp = ""; // Token temporário
-
-async function pegarToken() {
-  try {
-    const res = await fetch("https://eozro0mkz7fraud.m.pipedream.net"); // endpoint que gera o token temporário
-    if (!res.ok) throw new Error("Erro ao obter token");
-    const data = await res.json();
-    tokenTemp = data.token;
-  } catch {
-    status.textContent = "❌ Erro ao obter token. Atualize a página.";
-    status.style.color = "red";
-  }
-}
+const TOKEN_ENDPOINT = "https://eozro0mkz7fraud.m.pipedream.net"; // endpoint que GERA o token
+const WEBHOOK_ENDPOINT = "https://eoxyaqhni4imh4a.m.pipedream.net"; // endpoint que RECEBE o feedback
 
 function contemLink(texto) {
   const urlPattern = /(https?:\/\/[^\s]+)|(www\.[^\s]+)/gi;
@@ -43,9 +31,18 @@ function registrarEnvio() {
   localStorage.setItem('enviosFeedback', JSON.stringify(dados));
 }
 
-window.addEventListener("load", () => {
-  pegarToken();
-});
+async function obterTokenTemporario() {
+  try {
+    const res = await fetch(TOKEN_ENDPOINT);
+    if (!res.ok) throw new Error("Erro HTTP ao obter token.");
+    const data = await res.json();
+    if (!data.token) throw new Error("Resposta inválida do token.");
+    return data.token;
+  } catch (err) {
+    console.error(err);
+    throw new Error("❌ Erro ao gerar token. Tente novamente.");
+  }
+}
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -78,20 +75,21 @@ form.addEventListener("submit", async function (e) {
     return;
   }
 
-  if (!tokenTemp) {
-    status.textContent = "❌ Token inválido ou expirado. Atualize a página.";
+  let tokenTemp = "";
+  try {
+    tokenTemp = await obterTokenTemporario();
+  } catch (err) {
+    status.textContent = err.message;
     status.style.color = "red";
     return;
   }
-
-  const webhookURL = "https://eoxyaqhni4imh4a.m.pipedream.net";
 
   const payload = {
     content: `📬 **Novo Feedback Recebido**\n👤 Nome: ${nome}\n📧 Email: ${email}\n💬 Mensagem: ${mensagem}`
   };
 
   try {
-    const response = await fetch(webhookURL, {
+    const response = await fetch(WEBHOOK_ENDPOINT, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -106,11 +104,12 @@ form.addEventListener("submit", async function (e) {
       status.textContent = "✅ Feedback enviado com sucesso!";
       status.style.color = "green";
       form.reset();
-      await pegarToken(); // pega novo token depois do envio
     } else {
-      throw new Error("Erro ao enviar.");
+      const errRes = await response.text();
+      throw new Error("Erro ao enviar: " + errRes);
     }
-  } catch {
+  } catch (error) {
+    console.error(error);
     status.textContent = "❌ Erro ao enviar. Tente novamente.";
     status.style.color = "red";
   }
