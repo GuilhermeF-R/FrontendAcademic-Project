@@ -8,7 +8,22 @@ const MAX_LENGTHS = {
   mensagem: 500
 };
 
-// Função para verificar links simples no texto
+const SECRET_KEY = "VERIFICADOR_@1gQBOT"; // Chave secreta fixa
+
+let tokenTemp = ""; // Token temporário
+
+async function pegarToken() {
+  try {
+    const res = await fetch("https://eozro0mkz7fraud.m.pipedream.net"); // endpoint que gera o token temporário
+    if (!res.ok) throw new Error("Erro ao obter token");
+    const data = await res.json();
+    tokenTemp = data.token;
+  } catch {
+    status.textContent = "❌ Erro ao obter token. Atualize a página.";
+    status.style.color = "red";
+  }
+}
+
 function contemLink(texto) {
   const urlPattern = /(https?:\/\/[^\s]+)|(www\.[^\s]+)/gi;
   return urlPattern.test(texto);
@@ -28,7 +43,11 @@ function registrarEnvio() {
   localStorage.setItem('enviosFeedback', JSON.stringify(dados));
 }
 
-form.addEventListener("submit", function (e) {
+window.addEventListener("load", () => {
+  pegarToken();
+});
+
+form.addEventListener("submit", async function (e) {
   e.preventDefault();
 
   const nome = document.getElementById("nome").value.trim();
@@ -59,33 +78,40 @@ form.addEventListener("submit", function (e) {
     return;
   }
 
-  const webhookURL = "https://eoxyaqhni4imh4a.m.pipedream.net"; // Seu webhook do Pipedream
-  const SECRET_KEY = "VERIFICADOR_@1gQBOT"; // Substitua por sua chave real
+  if (!tokenTemp) {
+    status.textContent = "❌ Token inválido ou expirado. Atualize a página.";
+    status.style.color = "red";
+    return;
+  }
+
+  const webhookURL = "https://eoxyaqhni4imh4a.m.pipedream.net";
 
   const payload = {
     content: `📬 **Novo Feedback Recebido**\n👤 Nome: ${nome}\n📧 Email: ${email}\n💬 Mensagem: ${mensagem}`
   };
 
-  fetch(webhookURL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": SECRET_KEY
-    },
-    body: JSON.stringify(payload)
-  })
-    .then(response => {
-      if (response.ok) {
-        registrarEnvio();
-        status.textContent = "✅ Feedback enviado com sucesso!";
-        status.style.color = "green";
-        form.reset();
-      } else {
-        throw new Error("Erro ao enviar.");
-      }
-    })
-    .catch(error => {
-      status.textContent = "❌ Erro ao enviar. Tente novamente.";
-      status.style.color = "red";
+  try {
+    const response = await fetch(webhookURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-api-key": SECRET_KEY,
+        "x-temp-token": tokenTemp
+      },
+      body: JSON.stringify(payload)
     });
+
+    if (response.ok) {
+      registrarEnvio();
+      status.textContent = "✅ Feedback enviado com sucesso!";
+      status.style.color = "green";
+      form.reset();
+      await pegarToken(); // pega novo token depois do envio
+    } else {
+      throw new Error("Erro ao enviar.");
+    }
+  } catch {
+    status.textContent = "❌ Erro ao enviar. Tente novamente.";
+    status.style.color = "red";
+  }
 });
