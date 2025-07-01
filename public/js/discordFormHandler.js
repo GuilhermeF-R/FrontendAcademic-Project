@@ -9,7 +9,7 @@ const MAX_LENGTHS = {
 };
 
 const SECRET_KEY = "VERIFICADOR_@1gQBOT"; // Chave secreta fixa
-const TOKEN_ENDPOINT = "https://eozro0mkz7fraud.m.pipedream.net"; // endpoint que GERA o token
+const TOKEN_ENDPOINT = "https://eoryc8rsiysfic5.m.pipedream.net/"; // endpoint que GERA o token
 const WEBHOOK_ENDPOINT = "https://eoxyaqhni4imh4a.m.pipedream.net"; // endpoint que RECEBE o feedback
 
 function contemLink(texto) {
