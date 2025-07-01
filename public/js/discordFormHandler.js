@@ -47,7 +47,9 @@ async function salvarTokenNoWorkflow(token) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
   });
-
+  
+  console.log("Enviando token ao workflow:");
+  
   if (!res.ok) {
     throw new Error("Erro ao salvar token no workflow.");
   }
