@@ -7,7 +7,7 @@
 
 ## 📌 Sobre o Projeto
 
-O **DevPhone** é um site fictício desenvolvido como vitrine digital para uma linha imaginária de smartphones de alta tecnologia. Inspirado na estética da Apple, o projeto busca oferecer uma experiência moderna, fluida e responsiva, com forte apelo visual, interação via JavaScript e boas práticas de SEO e segurança.
+O **DevPhone** é um site fictício desenvolvido como vitrine digital para uma linha imaginária de smartphones de alta tecnologia. Recriando o site e a estética da Apple, o projeto busca oferecer uma experiência moderna, fluida e responsiva, com forte apelo visual, interação via JavaScript e boas práticas de SEO e segurança.
 
 Este projeto foi criado como parte da atividade MAPA da disciplina de **Programação Front-End** (Engenharia de Software - Unicesumar) e também serve como item de portfólio pessoal.
 
