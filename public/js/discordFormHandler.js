@@ -9,8 +9,8 @@ const MAX_LENGTHS = {
 };
 
 const SECRET_KEY = "VERIFICADOR_@1gQBOT"; // Chave secreta fixa
-const TOKEN_ENDPOINT = "https://eoryc8rsiysfic5.m.pipedream.net/"; // endpoint que GERA o token
-const WEBHOOK_ENDPOINT = "https://eoxyaqhni4imh4a.m.pipedream.net"; // endpoint que RECEBE o feedback
+const TOKEN_STORE_ENDPOINT = "https://eor4diyw5i2dc5r.m.pipedream.net"; // workflow que armazena token
+const WEBHOOK_ENDPOINT = "https://eoxyaqhni4imh4a.m.pipedream.net"; // workflow que recebe o feedback
 
 function contemLink(texto) {
   const urlPattern = /(https?:\/\/[^\s]+)|(www\.[^\s]+)/gi;
@@ -31,16 +31,25 @@ function registrarEnvio() {
   localStorage.setItem('enviosFeedback', JSON.stringify(dados));
 }
 
-async function obterTokenTemporario() {
-  try {
-    const res = await fetch(TOKEN_ENDPOINT);
-    if (!res.ok) throw new Error("Erro HTTP ao obter token.");
-    const data = await res.json();
-    if (!data.token) throw new Error("Resposta inválida do token.");
-    return data.token;
-  } catch (err) {
-    console.error(err);
-    throw new Error("❌ Erro ao gerar token. Tente novamente.");
+// Gera token simples no frontend
+function gerarTokenSimples() {
+  return Math.random().toString(36).substring(2, 18);
+}
+
+// Envia token + validade para o workflow armazenar no data store
+async function salvarTokenNoWorkflow(token) {
+  const expiresAt = Date.now() + 5 * 60 * 1000; // 5 minutos
+
+  const payload = { token, expiresAt };
+
+  const res = await fetch(TOKEN_STORE_ENDPOINT, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+
+  if (!res.ok) {
+    throw new Error("Erro ao salvar token no workflow.");
   }
 }
 
@@ -75,9 +84,11 @@ form.addEventListener("submit", async function (e) {
     return;
   }
 
-  let tokenTemp = "";
+  let tokenTemp = gerarTokenSimples();
+
   try {
-    tokenTemp = await obterTokenTemporario();
+    // Salva o token + validade no workflow
+    await salvarTokenNoWorkflow(tokenTemp);
   } catch (err) {
     status.textContent = err.message;
     status.style.color = "red";
