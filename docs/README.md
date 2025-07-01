@@ -95,7 +95,7 @@ Utilizamos **Pipedream** como camada de segurança para o envio de formulários 
 
 ## 🌐 SEO e Acessibilidade
 
-* Tags semânticas (<header>, <main>, <footer>)
+* Tags semânticas (header, main, footer)
 * Meta tags (description, keywords, viewport)
 * Imagens com atributos alt
 * Classes utilitárias (.visually-hidden, .nowrap)
